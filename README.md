@@ -1,7 +1,7 @@
 # SiLSM_v3
 An Modified Shuttleworth-Wallace model with isotopic tracers
 
-#Model Description
+# Model Description
 Our isotope-enabled two source model is applicable for evaluating evapotranspiration and its sub-components for different vegetation types with contrasting moisture conditions (even under flooding condition), and useful as an independent tool for investigating the discrepancies between isotope and non-isotope method. This model has been validated with observed isotope composition in the bulk leaf water and with the ET flux for variable vegetation covers, including crops (Rice, Wheat and Corn) and mangrove.
 
 If you have questions regarding our model and website,  any suggestions to improve our work, or want to use this model, please contact me.
