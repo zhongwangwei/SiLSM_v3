@@ -17,4 +17,4 @@ An Modified Shuttleworth-Wallace model with isotopic tracers
 |[modelperformance.m](https://github.com/zhongwangwei/SiLSM_v3/blob/master/modelperformance.m)|Check model performance|
 |[metalib.m](https://github.com/zhongwangwei/SiLSM_v3/blob/master/metalib.m)|meta lib calculation|
 |[nonsteadyT.m](https://github.com/zhongwangwei/SiLSM_v3/blob/master/nonsteadyT.m)|isotopic composition of transpiration under the steady-state assumption |
-|[Tc_Taylor_Expansion_theory.m](https://github.com/zhongwangwei/SiLSM_v3/blob/master/nonsteadyT.m)|canopy temperature calulated using Taylor expansion theory|
+|[Tc_Taylor_Expansion_theory.m](https://github.com/zhongwangwei/SiLSM_v3/blob/master/Tc_Taylor_Expansion_theory.m)|canopy temperature calulated using Taylor expansion theory|
