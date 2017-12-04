@@ -7,7 +7,7 @@ Our isotope-enabled two source model is applicable for evaluating evapotranspira
 If you have questions regarding our model and website,  any suggestions to improve our work, or want to use this model, please contact me.
 # Index of matlab Files
 
-| **File** | **Description** | 
+| **File** | **Description** |
 |:--------------------|:---------------------------------------------------------------------------------|
 |[SiLSMv3.m](https://github.com/zhongwangwei/SiLSM_v3/blob/master/SiLSMv3.m)|The main function.|
 |[MyConstants.m](https://github.com/zhongwangwei/SiLSM_v3/blob/master/MyConstants.m)|The MyConstants.m file is a text file that defines parameters that used in model calculation |
@@ -23,6 +23,11 @@ If you have questions regarding our model and website,  any suggestions to impro
 |[metalib.m](https://github.com/zhongwangwei/SiLSM_v3/blob/master/metalib.m)|meta lib calculation|
 |[nonsteadyT.m](https://github.com/zhongwangwei/SiLSM_v3/blob/master/nonsteadyT.m)|isotopic composition of transpiration under the steady-state assumption |
 |[Tc_Taylor_Expansion_theory.m](https://github.com/zhongwangwei/SiLSM_v3/blob/master/Tc_Taylor_Expansion_theory.m)|canopy temperature calulated using Taylor expansion theory|
+|[test.mat](https://github.com/zhongwangwei/SiLSM_v3/blob/master/test.mat)|Test data for the model|
+|[DE_flooding.m](https://github.com/zhongwangwei/SiLSM_v3/blob/master/DE_flooding.m)|Soil evaporation isotope calculation under flooding condition|
+|[DE_nonflooding.m](https://github.com/zhongwangwei/SiLSM_v3/blob/master/DE_nonflooding.m)|Soil evaporation isotope calculation under nonflooding condition|
+|[dailyaverage.m](https://github.com/zhongwangwei/SiLSM_v3/blob/master/dailyaverage.m)|Average data to daily|
+|[dailyaverageweight.m](https://github.com/zhongwangwei/SiLSM_v3/blob/master/dailyaverageweight.m)|Average data to daily with weight function|
 # MIT License
 
 Copyright (c) 2017 Zhongwang Wei

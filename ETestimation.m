@@ -20,7 +20,7 @@ C_i_0=400; % mg/m3
 %T_ck_0=300; %degK
 
 
-for i=1:10 % repeating 40 times to get more precise estimate of C_s, D_s and C_i
+for i=1:40 % repeating 40 times to get more precise estimate of C_s, D_s and C_i
     [A_g,A_n,~,~,g_cc,Gamma,~,~,~] = surface_conductance(T_ck_0,PAR_t, C_s, D_s_0, C_i_0,LAI,theta_2);
     g_cw=g_cc*1.6; % mm/s  
     rsc=1./g_cw;

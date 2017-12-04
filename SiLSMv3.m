@@ -8,7 +8,7 @@ clear ;
 
 
 %-----------------   Load Data matrix     -----------------%
-load('Luanchengcorn.mat')
+load('test.mat')
 %-----------------   Load Data matrix     -----------------%
 %% 
 %-----------------   Load date data     -----------------%
@@ -76,7 +76,7 @@ aa=yy(~isnan(LAI));
 bb=LAI(~isnan(LAI));
 c=interp1(aa,bb,yy,'linear','extrap');   
 LAI=c;
-%for Luancheng corn
+%for test case
 LAI(Month==6&Day<11)=2.5;
 clear yy aa bb c
 %%
@@ -97,12 +97,12 @@ end
 %----------------- linear fill Xylem_DO   -----------------% 
 %Caution:  resulted large uncertainty.
 if MyConstants.Isotope==1
-yy = datenum(Year, Month, Day, Hour, 0, 0); 
-aa=yy(~isnan(Xylem_DO));
-bb=Xylem_DO(~isnan(Xylem_DO));
-cc=interp1(aa,bb,yy,'linear','extrap');   
-Xylem_DO=cc;
-clear aa bb cc yy
+    yy = datenum(Year, Month, Day, Hour, 0, 0); 
+    aa=yy(~isnan(Xylem_DO));
+    bb=Xylem_DO(~isnan(Xylem_DO));
+    cc=interp1(aa,bb,yy,'linear','extrap');   
+    Xylem_DO_fill=cc;
+    clear aa bb cc yy
 end
 %%
 yy = datenum(Year, Month, Day, Hour, 0, 0); 
@@ -198,7 +198,7 @@ Tr(Tr<0)=0;
 
 LES=Es+Tr;
 %plot(LE_c(LES<800&LE_c<800&LE_c>-100&QCflag==1),LES(LES<800&LE_c<800&LE_c>-100&QCflag==1))
-%plot(T./LES)
+TET_sw=(Tr./LES);
 %  plot(LE_c(LES<800&LE_c<800&LE_c>-100),LES(LES<800&LE_c<800&LE_c>-100))
 %cftool(LE_c(LES<800&LE_c<800&LE_c>-100&QCflag==1),LES(LES<800&LE_c<800&LE_c>-100&QCflag==1))
 %  plot(T./LES)
@@ -206,33 +206,36 @@ LES=Es+Tr;
 
 
 % 
-delta_Lb_s=Xylem_DO;
-d_T=Xylem_DO;
-d_L=Xylem_DO;
-d_e=Xylem_DO;
+delta_Lb_s=Xylem_DO_fill;
+d_T=Xylem_DO_fill;
+d_L=Xylem_DO_fill;
+d_e=Xylem_DO_fill;
 e_Peclet=zeros(length(Zh),1);
 e_Peclet(1:length(Zh))=0.9;
   [d_T(1),d_L(1),d_e(1),e_Peclet(1),delta_Lb_s(1),exitfalg(1)]...
-            =nonsteadyT(Vapor_DO(1),Xylem_DO(1),Tem_c(1),Tr(1), ...
-            10,10,rsc(1),e_Avg(1),lwc(1),lwc(1),Zh(1),theta_2(1),ObukhovLength(1),LAI(1),0.9);
+            =nonsteadyT(Vapor_DO(1),Xylem_DO_fill(1),Tem_c(1),Tr(1), ...
+            Xylem_DO_fill(1),Xylem_DO_fill(1),rsc(1),e_Avg(1),lwc(1),lwc(1),Zh(1),theta_2(1),ObukhovLength(1),LAI(1),e_Peclet(1));
         for j=2:length(Zh)
             try
-                [d_T(j),d_L(j),d_e(j),e_Peclet(j),delta_Lb_s(j),exitfalg(j)]=nonsteadyT(Vapor_DO(j),Xylem_DO(j), ...
+                [d_T(j),d_L(j),d_e(j),e_Peclet(j),delta_Lb_s(j),exitfalg(j)]=nonsteadyT(Vapor_DO(j),Xylem_DO_fill(j), ...
                 Tem_c(j),Tr(j), ...
                 d_L(j-1),d_e(j-1), ...
                 rsc(j),e_Avg(j),lwc(j-1),lwc(j),Zh(j),theta_2(j),ObukhovLength(j),LAI(j), e_Peclet(j-1));
              catch
-%                 e_Peclet(j)=0.9;
-%                 d_L(j)=10;
-%                 d_e(j)=10;
-               %DSWO(j)=-5;
+                 e_Peclet(j)=0.9;
+                 d_L(j)=Xylem_DO_fill(j);
+                 d_e(j)=Xylem_DO_fill(j);
+                 d_T(j)=Xylem_DO_fill(j);
             end
            
         end
 
-% if Flooding==1
-% [Delta_E_O]=DEcalwetland(Ta_Avg,Ts_Avg,e_Avg,Rh_Avg,Soil_DO,0,Vapor_DO,0);
-% else
-% [Delta_E_O]=DEcalwetland(Ta_Avg,Ts_Avg,e_Avg,Rh_Avg,Soil_DO,0,Vapor_DO,0);
-% end
+if MyConstants.Flooding==1
+    [Delta_E_O]=DE_flooding(Ta_Avg,Ts_Avg,e_Avg,Rh_Avg,Soil_DO,Vapor_DO);
+else
+    [Delta_E_O]=DE_nonflooding(Ta_Avg,Ts_Avg,e_Avg,Rh_Avg,Soil_DO,Vapor_DO);
+end
 
+TETisonss=(ET_DO-Delta_E_O)./(d_T-Delta_E_O);
+
+%plot(TETisonss(LES<800&LE_c<800&LE_c>-100&QCflag==1&isnan(Xylem_DO)==0&isnan(Delta_E_O)==0),TET_sw(LES<800&LE_c<800&LE_c>-100&QCflag==1&isnan(Xylem_DO)==0&isnan(Delta_E_O)==0))
