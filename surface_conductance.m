@@ -89,7 +89,7 @@ function [A_g,A_n,A_m,g_m,g_cc,Gamma,d1,d2,R_d] = surface_conductance(T_sk,PAR_t
             A_m_max_298 = 2.2;
             Q_10_A_m    = 2.0;
             T_1_A_m     = 281.0;
-            T_2_A_m     = 301.0;
+            T_2_A_m     = 311.0;
         else
             A_m_max_298 = 1.7;
             Q_10_A_m=2.0;

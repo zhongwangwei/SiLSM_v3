@@ -205,15 +205,13 @@ TET_sw=(Tr./LES);
 %% 
 
 if MyConstants.Isotope==1
-
-% 
-delta_Lb_s=Xylem_DO_fill;
-d_T=Xylem_DO_fill;
-d_L=Xylem_DO_fill;
-d_e=Xylem_DO_fill;
-e_Peclet=zeros(length(Zh),1);
-e_Peclet(1:length(Zh))=0.9;
-  [d_T(1),d_L(1),d_e(1),e_Peclet(1),delta_Lb_s(1),exitfalg(1)]...
+    delta_Lb_s=Xylem_DO_fill;
+    d_T=Xylem_DO_fill;
+    d_L=Xylem_DO_fill;
+    d_e=Xylem_DO_fill;
+    e_Peclet=zeros(length(Zh),1);
+    e_Peclet(1:length(Zh))=0.9;
+    [d_T(1),d_L(1),d_e(1),e_Peclet(1),delta_Lb_s(1),exitfalg(1)]...
             =nonsteadyT(Vapor_DO(1),Xylem_DO_fill(1),Tem_c(1),Tr(1), ...
             Xylem_DO_fill(1),Xylem_DO_fill(1),rsc(1),e_Avg(1),lwc(1),lwc(1),Zh(1),theta_2(1),ObukhovLength(1),LAI(1),e_Peclet(1));
         for j=2:length(Zh)
