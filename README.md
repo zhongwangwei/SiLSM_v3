@@ -20,7 +20,7 @@ If you have questions regarding our model and website,  any suggestions to impro
 |[aerodynamicresistance.m](https://github.com/zhongwangwei/SiLSM_v3/blob/master/aerodynamicresistance.m)|Aerodynamic resistance calculation|
 |[flux_c.m](https://github.com/zhongwangwei/SiLSM_v3/blob/master/flux_c.m)|Force flux balance|
 |[modelperformance.m](https://github.com/zhongwangwei/SiLSM_v3/blob/master/modelperformance.m)|Check model performance|
-|[metalib.m](https://github.com/zhongwangwei/SiLSM_v3/blob/master/metalib.m)|meta lib calculation|
+|[metalib.m](https://github.com/zhongwangwei/SiLSM_v3/blob/master/metalib.m)|Meta lib calculation|
 |[nonsteadyT.m](https://github.com/zhongwangwei/SiLSM_v3/blob/master/nonsteadyT.m)|Isotopic composition of transpiration under the steady-state assumption |
 |[Tc_Taylor_Expansion_theory.m](https://github.com/zhongwangwei/SiLSM_v3/blob/master/Tc_Taylor_Expansion_theory.m)|Canopy temperature calulated using Taylor expansion theory|
 |[test.mat](https://github.com/zhongwangwei/SiLSM_v3/blob/master/test.mat)|Test data for the model|
