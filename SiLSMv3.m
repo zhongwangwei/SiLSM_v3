@@ -204,6 +204,7 @@ TET_sw=(Tr./LES);
 %  plot(T./LES)
 %% 
 
+if MyConstants.Isotope==1
 
 % 
 delta_Lb_s=Xylem_DO_fill;
@@ -237,5 +238,6 @@ else
 end
 
 TETisonss=(ET_DO-Delta_E_O)./(d_T-Delta_E_O);
+end
 
 %plot(TETisonss(LES<800&LE_c<800&LE_c>-100&QCflag==1&isnan(Xylem_DO)==0&isnan(Delta_E_O)==0),TET_sw(LES<800&LE_c<800&LE_c>-100&QCflag==1&isnan(Xylem_DO)==0&isnan(Delta_E_O)==0))
