@@ -17,12 +17,12 @@ If you have questions regarding our model and website,  any suggestions to impro
 |[Solar_zenith_angle.m](https://github.com/zhongwangwei/SiLSM_v3/blob/master/Solar_zenith_angle.m)|Solar zenith angle calculation, optional|
 |[sun_position.m](https://github.com/zhongwangwei/SiLSM_v3/blob/master/sun_position.m)|Sunposition calculation, optional|
 |[surface_conductance.m](https://github.com/zhongwangwei/SiLSM_v3/blob/master/surface_conductance.m)|Canopy conductance calculation|
-|[aerodynamicresistance.m](https://github.com/zhongwangwei/SiLSM_v3/blob/master/aerodynamicresistance.m)|aerodynamic resistance calculation|
+|[aerodynamicresistance.m](https://github.com/zhongwangwei/SiLSM_v3/blob/master/aerodynamicresistance.m)|Aerodynamic resistance calculation|
 |[flux_c.m](https://github.com/zhongwangwei/SiLSM_v3/blob/master/flux_c.m)|Force flux balance|
 |[modelperformance.m](https://github.com/zhongwangwei/SiLSM_v3/blob/master/modelperformance.m)|Check model performance|
 |[metalib.m](https://github.com/zhongwangwei/SiLSM_v3/blob/master/metalib.m)|meta lib calculation|
-|[nonsteadyT.m](https://github.com/zhongwangwei/SiLSM_v3/blob/master/nonsteadyT.m)|isotopic composition of transpiration under the steady-state assumption |
-|[Tc_Taylor_Expansion_theory.m](https://github.com/zhongwangwei/SiLSM_v3/blob/master/Tc_Taylor_Expansion_theory.m)|canopy temperature calulated using Taylor expansion theory|
+|[nonsteadyT.m](https://github.com/zhongwangwei/SiLSM_v3/blob/master/nonsteadyT.m)|Isotopic composition of transpiration under the steady-state assumption |
+|[Tc_Taylor_Expansion_theory.m](https://github.com/zhongwangwei/SiLSM_v3/blob/master/Tc_Taylor_Expansion_theory.m)|Canopy temperature calulated using Taylor expansion theory|
 |[test.mat](https://github.com/zhongwangwei/SiLSM_v3/blob/master/test.mat)|Test data for the model|
 |[DE_flooding.m](https://github.com/zhongwangwei/SiLSM_v3/blob/master/DE_flooding.m)|Soil evaporation isotope calculation under flooding condition|
 |[DE_nonflooding.m](https://github.com/zhongwangwei/SiLSM_v3/blob/master/DE_nonflooding.m)|Soil evaporation isotope calculation under nonflooding condition|
