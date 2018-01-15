@@ -1,7 +1,7 @@
 %%
 clc;
 clear ;
-%-----------------Declare constant variables-----------------%
+%-----------------Declare constant variables in MyConstants.m-----------------%
 
 
 %% 

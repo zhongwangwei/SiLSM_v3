@@ -114,7 +114,7 @@ function [A_g,A_n,A_m,g_m,g_cc,Gamma,d1,d2,R_d] = surface_conductance(T_sk,PAR_t
     WP=0.18; % adjust according to John Baker's suggestion
     beta=max(0,min(1,(theta-WP)/(FC-WP))); %opt result 0.51679 0.52234 1.1982*
     f5=2*beta-beta.*beta;
-    
+
 %#########soil moisture stress#################################
     [g_m]   = mesophyll_conductance(T_sk);
     [Gamma] = CO2_compensation_point(T_sk); 
