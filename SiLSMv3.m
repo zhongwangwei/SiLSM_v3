@@ -145,7 +145,7 @@ if MyConstants.Flooding==1
 end 
 [LE_c,H_c]=flux_c(G,H,LE,Rn_Avg);
 w_T=H_c./1.23/1004;
-ObukhovLength(isnan(ObukhovLength)==1)=((ustar(isnan(ObukhovLength)==1)).^3./(0.4*(9.8./Ta_Avg(isnan(ObukhovLength)==1)).*(w_T(isnan(ObukhovLength)==1))));
+ObukhovLength(isnan(ObukhovLength)==1)=-((ustar(isnan(ObukhovLength)==1)).^3./(0.4*(9.8./Ta_Avg(isnan(ObukhovLength)==1)).*(w_T(isnan(ObukhovLength)==1))));
 
 
 %QCcheck
