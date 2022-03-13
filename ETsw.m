@@ -36,7 +36,7 @@ Ra=(delta+Psy).*raa;
 wc=1./(1+Rc.*Ra./(Rs.*(Rc+Ra)));
 ws=1./(1+Rs.*Ra./(Rc.*(Rs+Ra)));
 PMc=(delta.*A+(rou.*Cp.*VPD-delta.*rac.*As)./(raa+rac))./(delta+Psy.*(1+rsc./(raa+rac)));
-PMs=(delta.*A+(rou.*Cp.*VPD-delta.*(A-As))./(raa+ras))./(delta+Psy.*(1+rss./(raa+ras)));
+PMs=(delta.*A+(rou.*Cp.*VPD-delta.*ras.*(A-As))./(raa+ras))./(delta+Psy.*(1+rss./(raa+ras)));
 T=wc.*PMc;
 E=ws.*PMs;
 end
