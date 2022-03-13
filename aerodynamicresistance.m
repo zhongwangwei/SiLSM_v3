@@ -16,7 +16,7 @@ Z0hg=0.1*Z0mg;
 %k von Karman constant 
 k=0.41;
 
-ZL=-(Zh-d0)./ObukhovLength;
+ZL=(Zh-d0)./ObukhovLength;
 ZL(ZL>1)=1;
 ZL(ZL<-1.5)=-1.5;
 %get stability correction function
