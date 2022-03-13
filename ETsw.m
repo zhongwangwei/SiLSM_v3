@@ -18,7 +18,7 @@ Kh=0.4*ustar.*(Zh-d0);
 %resistance(rb), calcualted from the wind speed at the top of canopy
 %(uh)and the characteristic leaf dimension (dl)
 Uh=wnd_spd./(1+log(MyConstants.Zu_m-Zh+1));
-rb=(100./(MyConstants.Km)).*((MyConstants.dl)./Uh)./(1-exp(-(MyConstants.Km)/2));
+rb=(100./(MyConstants.Km)).*((MyConstants.dl)./Uh)*0.5./(1-exp(-(MyConstants.Km)/2));
 rac=rb./(2*LAI);
 
 %%
