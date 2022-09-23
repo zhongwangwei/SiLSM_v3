@@ -98,7 +98,7 @@ function [A_g,A_n,A_m,g_m,g_cc,Gamma,d1,d2,R_d] = surface_conductance(T_sk,PAR_t
         end
         A_m_max     = A_m_max_298.*(Q_10_A_m.^((T_sk_0-298.)/10.));
         A_m_max     = A_m_max./((1+exp(0.3*(T_1_A_m-T_sk_0))).*(1+exp(0.3*(T_sk_0-T_2_A_m))));
-        A_m         = A_m_max.*(1-exp(-g_m*(C_i_0-Gamma)./A_m_max));
+        A_m         = A_m_max.*(1-exp(-g_m*1e-3.*(C_i_0-Gamma)./A_m_max));
     end
     if MyConstants.C3==1 
         f0=0.89;%see egea et al. 2011
